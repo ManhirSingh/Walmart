@@ -1,0 +1,41 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.UnexpectedAlertBehaviour;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+ 
+public class Demo {
+ 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+ 
+		System.setProperty("webdriver.chrome.driver", "//Users//rubelsingh//Documents//chromedriver");
+		WebDriver driver=new ChromeDriver();
+		
+		DesiredCapabilites cap= DesiredCapabilities.chrome();
+			cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS,true);
+		WebDriver driver1 = new ChromeDriver(capabilities);
+		
+		driver1.get("https://www.walmart.ca/en/ip/intex-metal-frame-pool/6000166640889");
+		System.out.println(driver1.getTitle());  
+		
+		driver1.findElement(By.cssSelector("css-1syn49.elkyjhv0")).click();
+}
+}
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+ 
+public class Demo {
+ 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+ 
+		System.setProperty("webdriver.chrome.driver", "//Users//rubelsingh//Documents//chromedriver");
+		WebDriver driver=new ChromeDriver();
+		
+		driver.get("https://www.walmart.ca/en/ip/intex-metal-frame-pool/6000166640889");
+		System.out.println(driver.getTitle());  
